@@ -11,10 +11,6 @@ module.exports = {
 		"plugin:react-hooks/recommended",
 		"plugin:jsx-a11y/recommended",
 	],
-	ignorePatterns: [".eslintrc.cjs"],
 	parser: "@typescript-eslint/parser",
-	parserOptions: {
-		ecmaVersion: "latest",
-		sourceType: "module",
-	},
+	ignorePatterns: [".eslintrc.cjs"],
 };
