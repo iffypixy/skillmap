@@ -9,6 +9,36 @@ datasource db {
 
 model User {
 	id String @id @default(uuid())
-	username String @unique
-	password String
+	email String? @unique
+	password String?
+	isAnonymous Boolean
+	sessionId String? @unique
+
+	roadmaps Roadmap[]
+
+	@@index([email, sessionId])
+}
+
+model Roadmap {
+	id String @id @default(uuid())
+	title String
+	chapters Json
+
+	owner   User @relation(fields: [ownerId], references: [id])
+  	ownerId String
+
+	guides Guide[]
+
+	@@index([ownerId])
+}
+
+model Guide {
+	id String @id @default(uuid())
+	markdown String
+	topicId String @unique
+
+	roadmap   Roadmap @relation(fields: [roadmapId], references: [id])
+  	roadmapId String
+
+	@@index([topicId])
 }

@@ -1,16 +1,184 @@
-html {
-	box-sizing: border-box;
-	font-size: 62.5%;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		box-sizing: border-box;
+		font-size: 62.5%;
+
+		@media screen(xl) {
+			font-size: 55%;
+		}
+
+		@media screen(lg) {
+			font-size: 50%;
+		}
+
+		@media screen(md) {
+			font-size: 45%;
+		}
+
+		@media screen(sm) {
+			font-size: 40%;
+		}
+
+		@media screen(xs) {
+			font-size: 35%;
+		}
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: inherit;
+		padding: 0;
+		margin: 0;
+	}
+
+	body {
+		@apply text-16;
+		@apply font-unbounded;
+		@apply bg-paper;
+	}
 }
 
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
-	padding: 0;
-	margin: 0;
+@font-face {
+	font-family: "Unbounded";
+	font-weight: 400;
+	src:
+		local("Unbounded"),
+		url("./shared/assets/fonts/Unbounded/Unbounded-Regular.woff2")
+			format("woff2");
 }
 
-body {
-	font-size: 1.6rem;
+@font-face {
+	font-family: "Unbounded";
+	font-weight: 500;
+	src:
+		local("Unbounded"),
+		url("./shared/assets/fonts/Unbounded/Unbounded-Medium.woff2")
+			format("woff2");
+}
+
+@font-face {
+	font-family: "Unbounded";
+	font-weight: 600;
+	src:
+		local("Unbounded"),
+		url("./shared/assets/fonts/Unbounded/Unbounded-SemiBold.woff2")
+			format("woff2");
+}
+
+@font-face {
+	font-family: "Unbounded";
+	font-weight: 700;
+	src:
+		local("Unbounded"),
+		url("./shared/assets/fonts/Unbounded/Unbounded-Bold.woff2")
+			format("woff2");
+}
+
+@font-face {
+	font-family: "Unbounded";
+	font-weight: 900;
+	src:
+		local("Unbounded"),
+		url("./shared/assets/fonts/Unbounded/Unbounded-ExtraBold.woff2")
+			format("woff2");
+}
+
+@font-face {
+	font-family: "Poppins";
+	font-weight: 300;
+	src:
+		local("Poppins"),
+		url("./shared/assets/fonts/Poppins/Poppins-Light.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Poppins";
+	font-weight: 400;
+	src:
+		local("Poppins"),
+		url("./shared/assets/fonts/Poppins/Poppins-Regular.woff2")
+			format("woff2");
+}
+
+@font-face {
+	font-family: "Poppins";
+	font-weight: 500;
+	src:
+		local("Poppins"),
+		url("./shared/assets/fonts/Poppins/Poppins-Medium.woff2")
+			format("woff2");
+}
+
+@font-face {
+	font-family: "Poppins";
+	font-weight: 600;
+	src:
+		local("Poppins"),
+		url("./shared/assets/fonts/Poppins/Poppins-SemiBold.woff2")
+			format("woff2");
+}
+
+@font-face {
+	font-family: "Poppins";
+	font-weight: 700;
+	src:
+		local("Poppins"),
+		url("./shared/assets/fonts/Poppins/Poppins-Bold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Poppins";
+	font-weight: 900;
+	src:
+		local("Poppins"),
+		url("./shared/assets/fonts/Poppins/Poppins-Black.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Sebino";
+	font-weight: 400;
+	src:
+		local("Sebino"),
+		url("./shared/assets/fonts/Sebino/Sebino-Regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Merriweather";
+	font-weight: 300;
+	src:
+		local("Merriweather"),
+		url("./shared/assets/fonts/Merriweather/Merriweather-Light.woff2")
+			format("woff2");
+}
+
+@font-face {
+	font-family: "Merriweather";
+	font-weight: 400;
+	src:
+		local("Merriweather"),
+		url("./shared/assets/fonts/Merriweather/Merriweather-Regular.woff2")
+			format("woff2");
+}
+
+@font-face {
+	font-family: "Merriweather";
+	font-weight: 700;
+	src:
+		local("Merriweather"),
+		url("./shared/assets/fonts/Merriweather/Merriweather-Bold.woff2")
+			format("woff2");
+}
+
+@font-face {
+	font-family: "Merriweather";
+	font-weight: 900;
+	src:
+		local("Merriweather"),
+		url("./shared/assets/fonts/Merriweather/Merriweather-Black.woff2")
+			format("woff2");
 }
